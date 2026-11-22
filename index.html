@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atharva Nayak — AI/ML &amp; Full-stack Engineer</title>
+  <meta name="description" content="Portfolio of Atharva Nayak, final-year Electronics & Computer Science student at TCET Mumbai. ML, reinforcement learning and full-stack projects.">
+  <meta name="author" content="Atharva Nayak">
+  <meta name="theme-color" content="#f4f1ea">
+
+  <!-- Security: locks the page to its own files. GitHub Pages can't send headers, so this meta tag is the policy.
+       If you later add images/fonts/scripts from another site, add that origin here or the browser will block it. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.github.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- >>> PASTE: after deploying, set the real URL + a 1200x630 image at assets/og.png for nice link previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Atharva Nayak — AI/ML & Full-stack Engineer">
+  <meta property="og:description" content="ML, reinforcement learning and full-stack projects.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#top" aria-label="Back to top"><span data-bind="initials">AN</span><i>.</i></a>
+    <nav aria-label="Primary">
+      <ul id="navlinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#numbers">Numbers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme" type="button" aria-label="Toggle dark mode"><span aria-hidden="true">◐</span></button>
+      <button class="icon-btn menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="navlinks" aria-label="Open menu"><span aria-hidden="true">☰</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Introduction">
+      <canvas id="bg" aria-hidden="true"></canvas>
+      <div class="wrap hero-inner">
+        <p class="eyebrow reveal">B.E. ECS · TCET Mumbai · Class of 2027</p>
+        <h1 class="reveal d1"><span data-bind="name">Atharva Nayak</span></h1>
+        <p class="role reveal d2"><span id="typed" aria-live="off"></span><span class="caret" aria-hidden="true"></span></p>
+        <p class="lead reveal d3" data-bind="intro"></p>
+        <div class="cta reveal d4">
+          <a class="btn primary" href="#work">Explore work</a>
+          <a class="btn" href="#contact">Let's talk</a>
+          <a class="btn ghost" id="resumeBtn" href="#" hidden download>Resume ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+    <section id="about" class="sec wrap">
+      <p class="label reveal">01 — About</p>
+      <div class="about-grid">
+        <div>
+          <h2 class="reveal">Hi, I'm <em id="firstName">Atharva.</em></h2>
+          <div id="aboutText" class="prose reveal"></div>
+          <p class="social reveal" id="socials"></p>
+        </div>
+        <aside class="idcard reveal" id="idcard" aria-label="Developer ID card">
+          <div class="id-top"><span>DEVELOPER ID</span><span id="idNo"></span></div>
+          <div class="id-body">
+            <img id="photo" alt="Portrait of Atharva Nayak" width="160" height="160" loading="lazy" decoding="async">
+            <div>
+              <h3 data-bind="name"></h3>
+              <p class="mute" id="idDept"></p>
+              <p class="mute">Valid · <span id="idValid"></span></p>
+            </div>
+          </div>
+          <div class="id-cols">
+            <div><h4>What I am</h4><ul id="idAm"></ul></div>
+            <div><h4>Quick facts</h4><dl id="idFacts"></dl></div>
+          </div>
+          <blockquote id="idQuote"></blockquote>
+        </aside>
+      </div>
+    </section>
+
+    <section id="skills" class="sec wrap">
+      <p class="label reveal">02 — Skills</p>
+      <h2 class="reveal">The periodic table of <em>my stack.</em></h2>
+      <div class="filters reveal" id="filters" role="tablist" aria-label="Filter skills"></div>
+      <ul class="elements" id="elements"></ul>
+    </section>
+
+    <section id="work" class="sec wrap">
+      <p class="label reveal">03 — Selected work</p>
+      <h2 class="reveal">Things I've <em>built.</em></h2>
+      <div class="cards" id="projects"></div>
+    </section>
+
+    <section id="github" class="sec wrap" hidden>
+      <p class="label reveal">Live — GitHub</p>
+      <h2 class="reveal">Latest <em>commits &amp; repos.</em></h2>
+      <ul class="repos" id="repos"></ul>
+    </section>
+
+    <section id="certs" class="sec wrap">
+      <p class="label reveal">04 — Certifications</p>
+      <h2 class="reveal">Proof of <em>practice.</em></h2>
+      <ul class="certs" id="certList"></ul>
+    </section>
+
+    <section id="journey" class="sec wrap">
+      <p class="label reveal">05 — Experience &amp; education</p>
+      <h2 class="reveal">The <em>journey</em> so far.</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <section id="numbers" class="sec wrap">
+      <p class="label reveal">06 — Achievements</p>
+      <h2 class="reveal">A few <em>numbers.</em></h2>
+      <ul class="stats" id="stats"></ul>
+    </section>
+
+    <section id="contact" class="sec wrap contact">
+      <p class="label reveal">07 — Contact</p>
+      <h2 class="big reveal">Let's build something <em>together.</em></h2>
+      <p class="lead reveal d3">Open to software engineering roles and interesting projects.</p>
+      <p class="mail reveal"><a id="mailLink" href="#"></a></p>
+      <div class="cta reveal d4">
+        <a class="btn primary" id="sayHello" href="#">Say hello</a>
+        <button class="btn" id="copyMail" type="button">Copy email</button>
+        <a class="btn ghost" id="ctaLinkedin" href="#" hidden>LinkedIn</a>
+        <a class="btn ghost" id="ctaGithub" href="#" hidden>GitHub</a>
+      </div>
+      <p class="sr-only" id="copyStatus" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>© <span id="year"></span> <span data-bind="name"></span>. Built by hand — no trackers, no cookies.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <noscript><p class="noscript">This portfolio needs JavaScript to render. Find me on GitHub: github.com/ArtNayak</p></noscript>
+</body>
+</html>
